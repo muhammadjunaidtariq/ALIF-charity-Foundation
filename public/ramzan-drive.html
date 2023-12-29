@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food - ALIF Charity Foundation</title>
+    <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="../src/css/custom.css">
+  <!-- /* Font Awsome Cdn */ -->
+  <link href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css" rel="stylesheet" type="text/css" />
+  <script src="../src/js/custom.js"></script>
+  <link rel="stylesheet" href="/src/custom.css">
+  <!-- Swipper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  
+</head>
+<body class="text-black dark:text-white bg-white dark:bg-gray-700 relative overflow-x-hidden"
+onscroll="changeHeaderBg()">
+<header class="p-5 md:px-10 2xl:px-24 py-3 fixed w-full bg-transparent z-50 shadow-none" id="headerTag">
+  <nav class="flex justify-between items-center bg-transparent">
+    <div class="flex gap-2 items-center">
+      <div class="inline-block xl:hidden">
+        <button onclick="toggleMenu()" class="p-2 rounded-md focus:outline-none">
+          <i class="fa-regular fa-bars-sort text-white" id="menuIcon"></i>
+        </button>
+      </div>
+      <a id="foundation-logo" href="#" class="">
+        <img src="./images/alif_logo.png" alt="" class="w-20 h-20 object-cover">
+      </a>
+    </div>
+    <div class="hidden xl:inline-block">
+      <ul class="flex justify-between items-center text-white opacity-85" id="nav-link">
+        <li>
+          <a href="./index.html" class="p-5 font-medium text-base">Home</a>
+        </li>
+        <li>
+          <div class="relative cursor-pointer">
+            <a type="button" data-dropdown-toggle="dropdown-projects"
+              class="flex gap-3 items-center p-5 font-medium text-base">
+              <span>Projects</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <div id="dropdown-projects"
+              class="z-10 hidden bg-white divide-y rounded-md shadow w-full dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="states-button">
+                <li>
+                  <button id="healthDropdownButton" data-dropdown-toggle="healthDropdown"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:text-[#701415]">Disaster<svg
+                      class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                    </svg></button>
+                  <div id="healthDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="healthDropdownButton">
+                      <li>
+                        <a href="./medical-DIK.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#701415]">DIK
+                          - 2021</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button id="educationDropdownButton" data-dropdown-toggle="educationDropdown"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:text-[#701415]">Food<svg
+                      class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                    </svg></button>
+                  <div id="educationDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="educationDropdownButton">
+                      <li>
+                        <a href="./ramzan-drive.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#701415]">Ramzan
+                          Drive</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="./medical-camp.html"
+                    class="inline-flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-[#701415]">
+                    <div class="inline-flex items-center"> Health</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./education.html"
+                    class="inline-flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-[#701415]">
+                    <div class="inline-flex items-center">
+                      Education
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./social-welfare.html"
+                    class="inline-flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-[#701415]">
+                    <div class="inline-flex items-center">
+                      Social Welfare
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./blogs.html" class="p-5 font-medium text-base">Blogs</a>
+        </li>
+        <li>
+          <a href="./about-us.html" class="p-5 font-medium text-base">About Us</a>
+        </li>
+        <li>
+          <a href="./team.html" class="p-5 font-medium text-base">Team</a>
+        </li>
+        <li>
+          <a href="./contact-us.html" class="p-5 font-medium text-base">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex justify-center items-center gap-3">
+      <a href="#donation"
+        class="hidden xl:flex px-5 py-2 text-white opacity-90 font-medium text-lg bg-[#701415] justify-center items-center rounded-full hover:bg-gray-500"
+        type="button">Donate</a>
+      <a href="./signIn.html"
+        class="font-medium text-lg text-white xl:underline bg-[#701415] rounded-md px-5 py-2 xl:bg-transparent"
+        type="button" id="loginButton">Log In</a>
+    </div>
+
+  </nav>
+</header>
+<!-- Sidebar on small screens -->
+<div id="toggleMenuBar" class="hidden w-full sm:w-[320px] h-full fixed top-0 left-0 bg-white shadow-xl z-50">
+  <div class="flex justify-end items-center">
+    <button onclick="toggleMenu()" class="p-5 rounded-md">
+      <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <ul class="flex flex-col justify-center w-full">
+    <li class="px-10 py-5">
+      <a href="./index.html" class="font-semibold text-lg text-[#727B9D]">Home</a>
+    </li>
+    <li>
+      <div class="flex gap-1 items-center px-10 py-5">
+        <button type="button" class="font-semibold text-lg text-[#727B9D]"
+          onclick="toggleDropdown()">Projects</button>
+        <svg class="w-2.5 h-2.5 ml-2.5 rotate-90 text-[#701415]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+      </div>
+      <ul class="hidden justify-center flex-col bg-[#eee]" id="smallScreenDropdown">
+        <li>
+          <div class="flex gap-1 items-center px-10 py-5">
+            <button type="button" class="font-semibold text-lg text-[#727B9D]"
+              onclick="toggleDropdown2()">Disaster</button>
+            <svg class="w-2.5 h-2.5 ml-2.5 rotate-90 text-[#701415]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+          </div>
+          <ul class="hidden justify-center flex-col bg-white" id="smallScreenDropdown2">
+            <li class="px-10 py-3">
+              <a href="./medical-DIK.html" class="font-semibold text-lg text-[#727B9D]">DIK - 2021</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="flex gap-1 items-center px-10 py-5">
+            <button type="button" class="font-semibold text-lg text-[#727B9D]"
+              onclick="toggleDropdown3()">Food</button>
+            <svg class="w-2.5 h-2.5 ml-2.5 rotate-90 text-[#701415]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+          </div>
+          <ul class="hidden justify-center flex-col bg-white" id="smallScreenDropdown3">
+            <li class="px-10 py-3">
+              <a href="./ramzan-drive.html" class="font-semibold text-lg text-[#727B9D]">Ramzan Drive</a>
+            </li>
+          </ul>
+        </li>
+        <li class="px-10 py-3">
+          <a href="./medical-camp.html" class="font-semibold text-lg text-[#727B9D]">Health</a>
+        </li>
+        <li class="px-10 py-3">
+          <a href="./education.html" class="font-semibold text-lg text-[#727B9D]">Education</a>
+        </li>
+        <li class="px-10 py-3">
+          <a href="./social-welfare.html" class="font-semibold text-lg text-[#727B9D]">Social Welfare</a>
+        </li>
+      </ul>
+    </li>
+    <li class="px-10 py-5">
+      <a href="./blogs.html" class="font-semibold text-lg text-[#727B9D]">Blogs</a>
+    </li>
+    <li class="px-10 py-5">
+      <a href="./about-us.html" class="font-semibold text-lg text-[#727B9D]">About Us</a>
+    </li>
+    <li class="px-10 py-5">
+      <a href="./team.html" class="font-semibold text-lg text-[#727B9D]">Team</a>
+    </li>
+    <li class="px-10 py-5">
+      <a href="./contact-us.html" class="font-semibold text-lg text-[#727B9D]">Contact Us</a>
+    </li>
+  </ul>
+  <div class="flex justify-center gap-3 mt-5 font-medium text-base text-white opacity-90">
+    <a href="#donation" class="w-48 h-16 font-bold text-xl bg-[#701415] flex justify-center items-center rounded-md"
+      type="button">Donate</a>
+  </div>
+</div>
+
+      <main>
+        <div class="grid grid-cols-1 w-full relative">
+            <div class="col-span-1 h-[70vh] sm:h-[55vh] bg-black">
+                <img src="./images/kids.jpg" class="w-full h-full object-cover opacity-40 filter grayscale" alt="">
+            </div>
+            <div class="absolute top-[40%] px-10 lg:px-[20%] flex flex-col gap-5 ">
+                <h2
+                    class="text-4xl md:text-[50px] leading-[65px] font-extrabold text-white border-l-8 border-[#701415] pl-3">
+                    Food</h2>
+                <p class="text-base md:text-lg font-semibold text-white">Ramzan-Drive</p>
+            </div>
+        </div>
+        <div class="overflow-auto p-5 md:px-10 mt-12">
+            <img src="./images/e348d4_0fccc924bfa646558c705f74568c42fd~mv2.webp"
+                class="w-[250px] h-[250px] md:w-[400px] md:h-[400px] object-cover float-left md:float-right p-1 sm:p-3 border-2 border-[#701415] m-3 md:m-5" alt="">
+            <p class="p-3 md:px-10 md:py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque assumenda unde
+                quisquam voluptas? Quam, nam eveniet consequatur distinctio dolorem fugit fuga adipisci atque.
+                Consectetur, necessitatibus minus ipsam perferendis sapiente dicta recusandae doloremque ut porro. Eos a
+                laudantium totam dignissimos, ut non ea tempora nihil laborum quia doloremque harum culpa amet delectus
+                incidunt distinctio iusto earum impedit unde rerum, soluta consectetur! Eos perspiciatis impedit
+                deleniti dignissimos ex eligendi corrupti asperiores. Iste laudantium tempore quidem quo beatae
+                doloribus nihil perferendis, architecto alias nulla, accusantium laboriosam voluptate harum magnam nisi
+                nesciunt accusamus fuga iure placeat expedita sed quas fugit! Aliquam, perspiciatis hic voluptatem,
+                saepe, doloremque sint molestiae nemo dolore asperiores quisquam autem aperiam placeat. Dolores illo,
+                architecto commodi omnis id earum impedit voluptatem perferendis ut amet est aliquam expedita dicta
+                incidunt debitis officiis? Molestias incidunt consequuntur deserunt, atque doloribus a ratione eum, cum,
+                dolor nihil autem aliquam ducimus vitae quia similique expedita.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae rerum perspiciatis mollitia beatae
+                aperiam expedita hic nihil, quia, facere similique fugit iusto quas sint molestias natus nostrum eius.
+                Iusto odio molestiae aperiam esse deleniti perferendis facilis reprehenderit ipsum, hic officiis, fugit
+                nemo dolorum ducimus in qui iste, veniam corporis? Aspernatur, ipsum inventore a praesentium, quibusdam
+                sequi iste velit cumque expedita molestiae veniam ea ducimus nesciunt. Ea ipsam ad fugiat. Dolorem
+                numquam tempora cum vel praesentium, ad, delectus, dolore necessitatibus harum maiores esse sapiente.
+                Nulla tempore quisquam aut nobis iusto eligendi laudantium? Voluptatem quidem veniam recusandae aperiam.
+                Temporibus repellat odio vel?</p>
+            <img src="./images/international-day-of-charity-1.avif"
+                class="w-[250px] h-[250px] md:w-[400px] md:h-[400px] p-1 sm:p-3 object-cover border-2 border-[#701415] float-left m-3 md:m-5" alt="">
+            <p class="p-3 md:px-10 md:py-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, illum id delectus expedita, pariatur
+                repudiandae vitae minus obcaecati dolorem error reprehenderit similique, suscipit asperiores et sapiente
+                voluptatum tenetur autem quas ipsa harum iusto inventore explicabo? Similique, perferendis. Quisquam
+                dolor doloribus harum explicabo, consequatur atque ipsam labore, officia placeat suscipit quod quidem
+                quibusdam odio et voluptas incidunt minus natus iure culpa expedita soluta eaque. Nemo totam, ex
+                doloremque, impedit earum expedita soluta optio error aut atque, blanditiis commodi iusto facere quia!
+                Explicabo earum vel molestias, quos expedita magnam sit. Est aut cupiditate deleniti omnis. Odit numquam
+                modi tenetur atque aut commodi, exercitationem incidunt recusandae deleniti accusamus dolore reiciendis
+                veritatis qui laudantium sunt, maiores dignissimos delectus aliquid architecto? Labore nobis sint ipsa
+                delectus corrupti dicta, sapiente optio praesentium minima dolore doloremque fugiat quam. Molestias
+                consectetur saepe ab rerum. Ducimus provident ex voluptate hic explicabo odit eius, repellendus sequi
+                tenetur. Provident inventore qui nihil doloremque tempora perferendis commodi, omnis doloribus, eos
+                nobis quia enim, optio autem. Animi facilis tempore unde, deserunt debitis ipsum repellat consectetur
+                quae sunt excepturi hic ut a cum officiis quidem ab corrupti saepe reprehenderit est, sapiente quod.
+                Cumque molestias illo obcaecati aut sit, dolor corrupti maiores quas facilis nostrum accusamus ea
+                explicabo animi laborum ipsum nisi provident voluptatibus? Blanditiis aperiam iusto iure culpa
+                consectetur. Facere accusantium sint mollitia, explicabo iusto fugiat autem optio dolores dicta eveniet
+                vero doloribus voluptate velit laboriosam, officia dolore libero? Eaque, necessitatibus! Dolor quam, non
+                nihil assumenda officia sed atque amet distinctio nam mollitia voluptate eum repudiandae obcaecati
+                voluptatem perspiciatis consequatur debitis quas, tempora, illum reprehenderit excepturi! Officia
+                quibusdam eius quaerat provident quis? Amet, a illo, nisi eius ad quo aliquid atque est, quaerat
+                inventore nemo numquam qui optio iure aut minima vel eos totam doloribus quas blanditiis perspiciatis.
+                Recusandae voluptatibus facilis et modi porro!
+            </p>
+        </div>
+        <div class="w-full h-[300px] md:h-[400px] 2xl:h-[500px] p-5 md:px-20 my-10">
+            <swiper-container class="mySwiper w-full h-full" autoplay pagination="true" pagination-clickable="true" slides-per-view="2"
+                navigation="false" space-between="20" loop>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/kids.jpg" class="w-full h-[85%] object-cover" alt="">
+                </swiper-slide>
+            </swiper-container>
+        </div>
+
+    </main>
+
+    <div include-html="footer.html" id="footer-file"></div>
+      <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+      <script src="../src/js/include-html.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="/src/js/gsapAnimation.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+</html>

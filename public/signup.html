@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="../src/css/custom.css" />
+    <title>Sign Up - ALIF Charity Foundation</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Outfit"
+      rel="stylesheet"
+    />
+    <!-- /* Font Awsome Cdn */ -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="../src/js/custom.js"></script>
+    <link rel="stylesheet" href="/src/custom.css" />
+    <!-- Swipper Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body class="text-black dark:text-white relative overflow-x-hidden">
+    <div class="absolute inset-0 bg-black">
+      <img src="./images/charity-93371.webp" alt="no source" class="w-full h-full object-cover blur-sm opacity-70">
+    </div>
+
+    <!-- Main -->
+    <main class="opacity-70 bg-transparent relative flex items-center justify-center h-[100vh]">
+      <div
+        class="flex justify-center text-center items-center">
+        <div class="bg-white p-10 border-t-8 border-[#701415]">
+          <h2 class="font-semibold text-4xl mb-3">Sign Up to your Account</h2>
+            <span class="w-20 font-[300]"></span>
+            <div
+            class="grid grid-col-1 justify-center items-center text-center mt-12 gap-8">
+          <div class="col-span-1 justify-center items-center text-start">
+            <label for="Username" class="text-black  text-start">Username</label>
+            <input
+              type="text"
+              required
+              placeholder="Enter your username"
+              id="Username"
+              name="Username"
+              class="mt-3 w-full px-3 md:px-7 py-3 border rounded-full border-slate-500 border-opacity-30 focus:border-[#701415] focus:outline-none foucs:shadow-md shadow-[#701415] text-gray-400"
+            />
+          </div>
+            <div class="col-span-1 justify-center items-center text-start">
+              <label for="Email" class="text-black  text-start">Email</label>
+              <input
+                type="email"
+                required
+                placeholder="example@gmail.com"
+                id="Email"
+                name="Email"
+                class="mt-3 w-full px-3 md:px-7 py-3 border rounded-full border-slate-500 border-opacity-30 focus:border-[#701415] focus:outline-none foucs:shadow-md shadow-[#701415] text-gray-400"
+              />
+            </div>
+            <div class="col-span-1 justify-center items-center text-start">
+              <label for="Password" class="text-black">Password</label>
+              <input
+                type="password"
+                required
+                placeholder="**********"
+                id="Password"
+                name="Password"
+                class="mt-3 w-full px-3 md:px-7 py-3 border rounded-full border-slate-500 border-opacity-30 focus:border-[#701415] focus:outline-none foucs:shadow-md shadow-[#701415] text-gray-400"
+              />
+            </div>
+            <div class="col-span-1 justify-center items-center text-start">
+                <label for="Password" class="text-black">Confirm Password</label>
+                <input
+                  type="password"
+                  required
+                  placeholder="**********"
+                  id="Password"
+                  name="Password"
+                  class="mt-3 w-full px-3 md:px-7 py-3 border rounded-full border-slate-500 border-opacity-30 focus:border-[#701415] focus:outline-none foucs:shadow-md shadow-[#701415] text-gray-400"
+                />
+              </div>
+            <div>
+              <button
+              onclick="handleRegister()"
+                type="submit"
+                class="px-8 py-3 mt-8 w-full rounded-full bg-[#701415] text-white"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/src/js/gsapAnimation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="../src/js/index.js" ></script>
+  </body>
+</html>

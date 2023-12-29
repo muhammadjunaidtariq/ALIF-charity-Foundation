@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="stylesheet" href="../src/css/custom.css" />
+  <title>Home - ALIF Charity Foundation</title>
+  <!-- /* Font Awsome Cdn */ -->
+  <link href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css" rel="stylesheet" type="text/css" />
+  <script src="../src/js/custom.js"></script>
+  <!-- Swipper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/alif_logoo-removebg-preview (1).ico" class="w-10 h-10">
+</head>
+
+<body class="text-black dark:text-white bg-white dark:bg-gray-700 relative overflow-x-hidden"
+  onscroll="changeHeaderBg()">
+  <header class="p-5 md:px-10 2xl:px-24 py-3 fixed w-full bg-transparent z-50 shadow-none" id="headerTag">
+    <nav class="flex justify-between items-center bg-transparent">
+      <div class="flex gap-2 items-center">
+        <div class="inline-block xl:hidden">
+          <button onclick="toggleMenu()" class="p-2 rounded-md focus:outline-none">
+            <i class="fa-regular fa-bars-sort text-white" id="menuIcon"></i>
+          </button>
+        </div>
+        <a id="foundation-logo" href="./index.html">
+          <img src="./images/alif_logoo-removebg-preview (1).ico" alt="" class="w-20 h-12 text-black object-cover">
+        </a>
+      </div>
+      <div class="hidden xl:inline-block">
+        <ul class="flex justify-between items-center text-white opacity-85" id="nav-link">
+          <li>
+            <a href="./index.html" class="p-5 font-medium text-base">Home</a>
+          </li>
+          <li>
+            <div class="relative cursor-pointer">
+              <a type="button" data-dropdown-toggle="dropdown-projects"
+                class="flex gap-3 items-center p-5 font-medium text-base">
+                <span>Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <div id="dropdown-projects"
+                class="z-10 hidden bg-white divide-y rounded-md shadow w-full dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="states-button">
+                  <li>
+                    <button id="healthDropdownButton" data-dropdown-toggle="healthDropdown"
+                      data-dropdown-placement="right-start" type="button"
+                      class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:text-[#701415]">Disaster<svg
+                        class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 9 4-4-4-4" />
+                      </svg></button>
+                    <div id="healthDropdown"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="healthDropdownButton">
+                        <li>
+                          <a href="./medical-DIK.html"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#701415]">DIK
+                            - 2021</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button id="educationDropdownButton" data-dropdown-toggle="educationDropdown"
+                      data-dropdown-placement="right-start" type="button"
+                      class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 hover:text-[#701415]">Food<svg
+                        class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 9 4-4-4-4" />
+                      </svg></button>
+                    <div id="educationDropdown"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="educationDropdownButton">
+                        <li>
+                          <a href="./ramzan-drive.html"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-[#701415]">Ramzan
+                            Drive</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="./medical-camp.html"
+                      class="inline-flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-[#701415]">
+                      <div class="inline-flex items-center"> Health</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./education.html"
+                      class="inline-flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-[#701415]">
+                      <div class="inline-flex items-center">
+                        Education
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./social-welfare.html"
+                      class="inline-flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-[#701415]">
+                      <div class="inline-flex items-center">
+                        Social Welfare
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="./blogs.html" class="p-5 font-medium text-base">Blogs</a>
+          </li>
+          <li>
+            <a href="./about-us.html" class="p-5 font-medium text-base">About Us</a>
+          </li>
+          <li>
+            <a href="./team.html" class="p-5 font-medium text-base">Team</a>
+          </li>
+          <li>
+            <a href="./contact-us.html" class="p-5 font-medium text-base">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center items-center gap-3">
+        <a href="#donation"
+          class="hidden xl:flex px-5 py-2 text-white opacity-90 font-medium text-lg bg-[#701415] justify-center items-center rounded-full hover:bg-gray-500"
+          type="button">Donate</a>
+        <a href="./signIn.html"
+          class="font-medium text-lg text-white xl:underline bg-[#701415] rounded-md px-5 py-2 xl:bg-transparent"
+          type="button" id="loginButton">Log In</a>
+      </div>
+
+    </nav>
+  </header>
+  <!-- Sidebar on small screens -->
+  <div id="toggleMenuBar" class="hidden w-full sm:w-[320px] h-full fixed top-0 left-0 bg-white shadow-xl z-50">
+    <div class="flex justify-end items-center">
+      <button onclick="toggleMenu()" class="p-5 rounded-md">
+        <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col justify-center w-full">
+      <li class="px-10 py-5">
+        <a href="./index.html" class="font-semibold text-lg text-[#727B9D]">Home</a>
+      </li>
+      <li>
+        <div class="flex gap-1 items-center px-10 py-5">
+          <button type="button" class="font-semibold text-lg text-[#727B9D]"
+            onclick="toggleDropdown()">Projects</button>
+          <svg class="w-2.5 h-2.5 ml-2.5 rotate-90 text-[#701415]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 9 4-4-4-4" />
+          </svg>
+        </div>
+        <ul class="hidden justify-center flex-col bg-[#eee]" id="smallScreenDropdown">
+          <li>
+            <div class="flex gap-1 items-center px-10 py-5">
+              <button type="button" class="font-semibold text-lg text-[#727B9D]"
+                onclick="toggleDropdown2()">Disaster</button>
+              <svg class="w-2.5 h-2.5 ml-2.5 rotate-90 text-[#701415]" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 9 4-4-4-4" />
+              </svg>
+            </div>
+            <ul class="hidden justify-center flex-col bg-white" id="smallScreenDropdown2">
+              <li class="px-10 py-3">
+                <a href="./medical-DIK.html" class="font-semibold text-lg text-[#727B9D]">DIK - 2021</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="flex gap-1 items-center px-10 py-5">
+              <button type="button" class="font-semibold text-lg text-[#727B9D]"
+                onclick="toggleDropdown3()">Food</button>
+              <svg class="w-2.5 h-2.5 ml-2.5 rotate-90 text-[#701415]" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 9 4-4-4-4" />
+              </svg>
+            </div>
+            <ul class="hidden justify-center flex-col bg-white" id="smallScreenDropdown3">
+              <li class="px-10 py-3">
+                <a href="./ramzan-drive.html" class="font-semibold text-lg text-[#727B9D]">Ramzan Drive</a>
+              </li>
+            </ul>
+          </li>
+          <li class="px-10 py-3">
+            <a href="./medical-camp.html" class="font-semibold text-lg text-[#727B9D]">Health</a>
+          </li>
+          <li class="px-10 py-3">
+            <a href="./education.html" class="font-semibold text-lg text-[#727B9D]">Education</a>
+          </li>
+          <li class="px-10 py-3">
+            <a href="./social-welfare.html" class="font-semibold text-lg text-[#727B9D]">Social Welfare</a>
+          </li>
+        </ul>
+      </li>
+      <li class="px-10 py-5">
+        <a href="./blogs.html" class="font-semibold text-lg text-[#727B9D]">Blogs</a>
+      </li>
+      <li class="px-10 py-5">
+        <a href="./about-us.html" class="font-semibold text-lg text-[#727B9D]">About Us</a>
+      </li>
+      <li class="px-10 py-5">
+        <a href="./team.html" class="font-semibold text-lg text-[#727B9D]">Team</a>
+      </li>
+      <li class="px-10 py-5">
+        <a href="./contact-us.html" class="font-semibold text-lg text-[#727B9D]">Contact Us</a>
+      </li>
+    </ul>
+    <div class="flex justify-center gap-3 mt-5 font-medium text-base text-white opacity-90">
+      <a href="#donation" class="w-48 h-16 font-bold text-xl bg-[#701415] flex justify-center items-center rounded-md"
+        type="button">Donate</a>
+    </div>
+  </div>
+  <main>
+    <section class="w-full 2xl:h-[100vh] relative bg-black">
+      <div class="opacity-80 w-full h-full relative">
+        <div class="absolute inset-0 -z-10 bg-black">
+          <img src="./images/main.jpg" class="w-full h-full object-cover opacity-70 blur-md" alt="">
+        </div>
+        <!-- <img src="./images/desktop-wallpaper-charity-high-quality-poor.jpg" class="blur-sm w-full h-full object-cover opacity-40 grayscale" alt=""> -->
+        <div class="p-5 md:px-10 3xl:px-24 py-5 w-full h-full mt-10 sm:mt-0 flex items-center justify-center">
+          <div class="grid lg:grid-cols-3 gap-20 mt-14 md:p-16 items-center justify-center">
+            <div class="col-span-1 flex justify-center items-start flex-col sm:p-5 3xl:p-8 gap-8 text-white">
+              <h1
+                class="text-3xl sm:text-[40px] lg:text-[50px] 3xl:text-[60px] sm:leading-[65px] tracking-wide 3xl:leading-[85px] font-bold mb-4 3xl:mb-6 uppercase">
+                "A journey from human to ALLAH"
+              </h1>
+              <p class="text-lg 3xl:text-2xl font-medium italic">
+                ALIF Charity Foundation works towards a world where no child's
+                life is torn apart by war.
+              </p>
+
+            </div>
+            <div
+              class="col-span-2 h-[250px] sm:h-[400px] lg:h-[550px] 3xl:h-[800px] p-5 border-t-[8px] border-r-[8px] border-[#701415] border-double">
+              <div class="relative h-full w-full">
+                <div class="scrollImgContainer overflow-hidden opacity-0 w-full absolute inset-0">
+                  <img src="./images/main.jpg" class="w-full object-cover h-full" alt="" />
+                </div>
+                <div class="scrollImgContainer overflow-hidden opacity-0 w-full absolute inset-0">
+                  <img src="./images/Picsart_23-11-02_16-04-36-411.jpg" class="w-full object-cover h-full" alt="" />
+                </div>
+                <div class="scrollImgContainer overflow-hidden opacity-0 w-full absolute inset-0">
+                  <img src="./images/desktop-wallpaper-charity-high-quality-poor.jpg" class="w-full object-cover h-full"
+                    alt="" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Box or Dialog -->
+    <section class="grid grid-cols-1 p-5 sm:p-0 mt-10 sm:mt-20" id="donation">
+      <div class="flex justify-center items-center">
+        <div
+          class="w-full sm:w-4/5 bg-white shadow-2xl grid grid-cols-1 xl:grid-cols-5 divide-y-4 xl:divide-y-0 xl:divide-x-4 divide-[#701415] rounded-[20px]">
+          <div class="col-span-1 p-5">
+            <ul class="flex flex-col sm:flex-row xl:flex-col items-center gap-3" id="myTab"
+              data-tabs-toggle="#myContent" role="tablist">
+              <li class="flex items-center border-2 group w-full sm:w-auto rounded-md" role="presentation">
+                <button
+                  class="inline-block p-4 w-full md:w-[150px] rounded-t-lg font-semibold text-lg group-hover:text-[#701415] hover:border-[#701415] aria-selected:border-[#701415] aria-selected:text-[#701415] aria-selected:font-extrabold group-hover:font-extrabold border-[#701415]"
+                  id="amount-selector" data-tabs-target="#amount" type="button" role="tab" aria-controls="amount"
+                  aria-selected="true">
+                  Amount
+                </button>
+              </li>
+              <li class="flex items-center border-2 group w-full sm:w-auto peer rounded-md" role="presentation">
+                <button
+                  class="inline-block p-4 w-full md:w-[150px] rounded-t-lg font-semibold text-lg group-hover:text-[#701415] hover:border-[#701415] aria-selected:border-[#701415] aria-selected:text-[#701415] aria-selected:font-extrabold group-hover:font-extrabold border-[#701415]"
+                  id="details-selector" data-tabs-target="#details" type="button" role="tab" aria-controls="details"
+                  aria-selected="false">
+                  Details
+                </button>
+              </li>
+              <li class="flex items-center border-2 group w-full sm:w-auto peer rounded-md" role="presentation">
+                <button
+                  class="inline-block p-4 w-full md:w-[150px] rounded-t-lg font-semibold text-lg group-hover:text-[#701415] hover:border-[#701415] aria-selected:border-[#701415] aria-selected:text-[#701415] aria-selected:font-extrabold group-hover:font-extrabold border-[#701415]"
+                  id="payment-tab" data-tabs-target="#payment" type="button" role="tab" aria-controls="payment"
+                  aria-selected="false">
+                  Payment
+                </button>
+              </li>
+            </ul>
+          </div>
+          <form id="myContent" class="xl:col-span-4 py-10">
+            <!-- Amount tab data -->
+            <div class="hidden" id="amount" role="tabpanel" aria-labelledby="amount-selector">
+              <div class="p-5 md:px-20 flex flex-col gap-5">
+                <div class="relative w-full xl:w-[350px]">
+                  <input type="number" id="amountValue"
+                    class="block px-2.5 pb-2.5 pt-4 w-full sm:w-[350px] text-sm text-gray-900 bg-transparent rounded-md border appearance-none dark:text-white border-gray-200 dark:border-gray-700 dark:focus:border-[#701415] focus:outline-none focus:ring-0 focus:border-[#701415] peer required:text-[#701415]"
+                    placeholder="" required title="Please enter the amount first" />
+                  <label for="floating_outlined"
+                    class="absolute text-base text-[#727B9D] dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-[5px] z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-[#701415] peer-focus:dark:text-[#701415] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-[5px] peer-focus:scale-75 peer-focus:-translate-y-4 left-1 pointer-events-none">Enter
+                    your amount (PKR)</label>
+                </div>
+
+                <label for="donationType" class="sr-only">Donations for</label>
+                <select id="donationType" required
+                  class="border-gray-200 font-medium bg-transparent rounded-md border appearance-none text-gray-900 text-sm  block w-full sm:w-[350px] px-2.5 focus:outline-none focus:ring-0 pt-4 pb-2.5 focus:border-[#701415]">
+                  <option value="">Choose an option</option>
+                  <option value="Health">Health</option>
+                  <option value="Education">Education</option>
+                  <option value="Food">Food</option>
+                  <option value="Social Welfare">Social Welfare</option>
+                  <option value="Shelter">Shelter</option>
+                  <option value="Zakaat">Zakaat</option>
+                  <option value="Fitra">Fitra</option>
+                </select>
+
+                <div class="flex justify-end">
+                  <button type="button" class="flex group" onclick="clickDetailsSelector()">
+                    <div
+                      class="w-8 h-8 bg-[#800000] group-hover:bg-black rounded-md animate-pulse group-hover:animate-none relative">
+                      <div class="!w-20 h-0.5 border-t-2 border-black absolute left-1/2 top-1/2"></div>
+                    </div>
+                    <span class="text-2xl font-extrabold ml-[70px] mt-0">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Details tab data -->
+            <div class="hidden" id="details" role="tabpanel" aria-labelledby="details-selector">
+              <div class="flex flex-col justify-center gap-5 p-5 md:px-20">
+                <div class="relative w-full xl:w-[350px]">
+                  <input type="text" id="donorUsername"
+                    class="block px-2.5 pb-2.5 pt-4 w-full sm:w-[350px] text-sm text-gray-900 bg-transparent rounded-md border appearance-none dark:text-white dark:border-gray-700 dark:focus:border-[#701415] focus:outline-none focus:ring-0 focus:border-[#701415] peer required:text-[#701415] border-gray-200"
+                    placeholder="" required title="Enter your name" />
+                  <label for="floating_outlined"
+                    class="absolute text-base text-[#727B9D] dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-[5px] z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-[#701415] peer-focus:dark:text-[#701415] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-[5px] peer-focus:scale-75 peer-focus:-translate-y-4 left-1 pointer-events-none">Enter
+                    name</label>
+                </div>
+                <div class="relative w-full xl:w-[350px]">
+                  <input type="email" id="donorEmail"
+                    class="block px-2.5 pb-2.5 pt-4 w-full sm:w-[350px] text-sm text-gray-900 bg-transparent rounded-md border appearance-none dark:text-white dark:border-gray-700 dark:focus:border-[#701415] focus:outline-none focus:ring-0 focus:border-[#701415] peer required:text-[#701415] border-gray-200"
+                    placeholder="" required title="Enter your email" />
+                  <label for="floating_outlined"
+                    class="absolute text-base text-[#727B9D] dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-[5px] z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-[#701415] peer-focus:dark:text-[#701415] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-[5px] peer-focus:scale-75 peer-focus:-translate-y-4 left-1 pointer-events-none">Enter
+                    email</label>
+                </div>
+                <div class="relative w-full xl:w-[350px]">
+                  <input type="tel" id="donorPhoneNumber"
+                    class="block px-2.5 pb-2.5 pt-4 w-full sm:w-[350px] text-sm text-gray-900 bg-transparent rounded-md border appearance-none dark:text-white dark:border-gray-700 dark:focus:border-[#701415] focus:outline-none focus:ring-0 focus:border-[#701415] peer required:text-[#701415] border-gray-200"
+                    placeholder="" required title="Enter your phone number" />
+                  <label for="floating_outlined"
+                    class="absolute text-base text-[#727B9D] dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-[5px] z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-[#701415] peer-focus:dark:text-[#701415] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-[5px] peer-focus:scale-75 peer-focus:-translate-y-4 left-1 pointer-events-none">Enter
+                    your phone number</label>
+                </div>
+                <div class="relative w-full xl:w-[350px]">
+                  <input type="text" id="donorCity"
+                    class="block px-2.5 pb-2.5 pt-4 w-full sm:w-[350px] text-sm text-gray-900 bg-transparent rounded-md border appearance-none dark:text-white dark:border-gray-700 dark:focus:border-[#701415] focus:outline-none focus:ring-0 focus:border-[#701415] peer required:text-[#701415] border-gray-200"
+                    placeholder="" title="Enter your city name" />
+                  <label for="floating_outlined"
+                    class="absolute text-base text-[#727B9D] dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-[5px] z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-[#701415] peer-focus:dark:text-[#701415] peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-[5px] peer-focus:scale-75 peer-focus:-translate-y-4 left-1 pointer-events-none">Enter
+                    your city (Optional)</label>
+                </div>
+                <div class="flex justify-end">
+                  <button type="button" class="flex group" onclick="clickPaymentSelector()">
+                    <div
+                      class="w-8 h-8 bg-[#800000] group-hover:bg-black rounded-md animate-pulse group-hover:animate-none relative">
+                      <div class="!w-20 h-0.5 border-t-2 border-black absolute left-1/2 top-1/2"></div>
+                    </div>
+                    <span class="text-2xl font-extrabold ml-[70px] mt-0">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment tab data -->
+            <div class="hidden p-5" id="payment" role="tabpanel" aria-labelledby="payment-selector">
+              <div class="grid grid-cols-3 border-b-2 border-gray-200">
+                <div class="col-span-1 p-5 md:px-10 py-5">
+                  <h3 class="text-2xl font-semibold">Donation Amount:</h3>
+                </div>
+                <div class="col-span-2 px-10 py-5 flex justify-self-end">
+                  <h3 class="text-2xl font-bold">Rs: <span>10</span></h3>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5 mt-10">
+                <div class="flex items-center gap-5">
+                  <input id="red-radio" type="radio" value="" name="colored-radio"
+                    class="w-4 h-4 text-[#701415] bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                  <img class="w-32 h-20" src="./images/jazzcashlogo-removebg-preview.png" alt="" />
+                </div>
+                <div class="flex items-center gap-5">
+                  <input id="green-radio" type="radio" value="" name="colored-radio"
+                    class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                  <img class="w-32 h-20" src="./images/easypaisa-removebg-preview.png" alt="Easypaisa" />
+                </div>
+                <div class="flex justify-end">
+                  <a href="" type="submit" class="flex group justify-end">
+                    <div
+                      class="w-8 h-8 bg-[#800000] group-hover:bg-black rounded-md animate-pulse group-hover:animate-none relative">
+                      <div class="!w-20 h-0.5 border-t-2 border-black absolute left-1/2 top-1/2"></div>
+                    </div>
+                    <span class="text-2xl font-extrabold ml-[70px] mt-0">Proceed</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="relative px-5 py-20 lg:px-20 mt-20 grid grid-cols-1 bg-[#eee]">
+      <div class="col-span-1 flex justify-center items-center gap-10">
+        <div class="">
+          <h2 class="text-4xl text-center lg:text-[45px] font-bold mb-5 text-[#701415]">
+            Our Mission
+          </h2>
+          <p class="text-base font-semibold opacity-70">
+            Our mission is to uplift and empower individuals and communities in need, fostering positive and lasting
+            change in the world
+          </p>
+        </div>
+      </div>
+      <div class="md:px-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 mt-10 md:mt-20">
+        <div
+          class="items-start col-span-1 flex flex-col text-start p-10 bg-white shadow-xl rounded-lg dark:shadow-neutral-600 group">
+          <svg class="text-6xl fill-[#701415]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+            <path
+              d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384l0 0-.9 0c.3 0 .6 0 .9 0z" />
+          </svg>
+          <h3 class="font-bold text-2xl mt-8 text-gray-600 group-hover:text-gray-800">Health</h3>
+          <p class="mt-5 text-[#727b9d]">
+            We are committed to improving the overall health and well-being of communities by providing healthcare
+            services, promoting preventive care, and supporting mental health initiatives
+          </p>
+        </div>
+        <div
+          class="items-start col-span-1 flex flex-col text-start p-10 bg-white shadow-xl rounded-lg dark:shadow-neutral-600 group">
+          <svg class="text-6xl fill-[#701415]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+            <path
+              d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" />
+          </svg>
+          <h3 class="font-bold text-2xl mt-8 text-gray-600 group-hover:text-gray-800">Education</h3>
+          <p class="mt-5 text-[#727b9d]">
+            We believe in the power of education to break the cycle of poverty. Through scholarships, vocational
+            training, and educational programs.
+          </p>
+        </div>
+        <div
+          class="items-start col-span-1 flex flex-col text-start p-10 bg-white shadow-xl rounded-lg dark:shadow-neutral-600 group">
+          <svg class="text-6xl fill-[#701415]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+            <path
+              d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zM272 192H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16s7.2-16 16-16zM256 304c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16zM164 152v13.9c7.5 1.2 14.6 2.9 21.1 4.7c10.7 2.8 17 13.8 14.2 24.5s-13.8 17-24.5 14.2c-11-2.9-21.6-5-31.2-5.2c-7.9-.1-16 1.8-21.5 5c-4.8 2.8-6.2 5.6-6.2 9.3c0 1.8 .1 3.5 5.3 6.7c6.3 3.8 15.5 6.7 28.3 10.5l.7 .2c11.2 3.4 25.6 7.7 37.1 15c12.9 8.1 24.3 21.3 24.6 41.6c.3 20.9-10.5 36.1-24.8 45c-7.2 4.5-15.2 7.3-23.2 9V360c0 11-9 20-20 20s-20-9-20-20V345.4c-10.3-2.2-20-5.5-28.2-8.4l0 0 0 0c-2.1-.7-4.1-1.4-6.1-2.1c-10.5-3.5-16.1-14.8-12.6-25.3s14.8-16.1 25.3-12.6c2.5 .8 4.9 1.7 7.2 2.4c13.6 4.6 24 8.1 35.1 8.5c8.6 .3 16.5-1.6 21.4-4.7c4.1-2.5 6-5.5 5.9-10.5c0-2.9-.8-5-5.9-8.2c-6.3-4-15.4-6.9-28-10.7l-1.7-.5c-10.9-3.3-24.6-7.4-35.6-14c-12.7-7.7-24.6-20.5-24.7-40.7c-.1-21.1 11.8-35.7 25.8-43.9c6.9-4.1 14.5-6.8 22.2-8.5V152c0-11 9-20 20-20s20 9 20 20z" />
+          </svg>
+          <h3 class="font-bold text-2xl mt-8 text-gray-600 group-hover:text-gray-800">Foster Economic Empowerment</h3>
+          <p class="mt-5 text-[#727b9d]">
+            We work towards creating sustainable livelihoods and economic opportunities, enabling individuals to support
+            themselves and their families with dignity and independence.
+          </p>
+        </div>
+        <div
+          class="items-start col-span-1 flex flex-col text-start p-10 bg-white shadow-xl rounded-lg dark:shadow-neutral-600 group">
+          <svg class="text-6xl fill-[#701415]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+            <path
+              d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z" />
+          </svg>
+          <h3 class="font-bold text-2xl mt-8 text-gray-600 group-hover:text-gray-800">Collaborate and Engage</h3>
+          <p class="mt-5 text-[#727b9d]">
+            We believe in the power of partnerships. We actively seek collaborations with like-minded organizations,
+            businesses, and individuals to amplify our impact and reach.
+          </p>
+        </div>
+        <div
+          class="items-start col-span-1 flex flex-col text-start p-10 bg-white shadow-xl rounded-lg dark:shadow-neutral-600 group">
+          <svg class="text-6xl fill-[#701415]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+            <path
+              d="M192 64c0-17.7-14.3-32-32-32s-32 14.3-32 32V96.2c0 54.1 23.5 104 62.2 138.3l-21 146.7c7.8 2.1 15.5 3.3 22.8 3.3c21.1 0 42-8.5 59.2-20.3c22.1-15.5 51.6-15.5 73.7 0c12.4 8.5 26.1 14.8 39.7 18l17.7-97.6c10.7-1.2 21.3-3.1 31.9-5.5l105-23.9c17.2-3.9 28-21.1 24.1-38.3s-21.1-28-38.3-24.1L400 216.6c-41 9.3-83.7 7.5-123.7-5.2c-50.2-16-84.3-62.6-84.3-115.3V64zM320 192a64 64 0 1 0 0-128 64 64 0 1 0 0 128zM306.5 389.9c-11.1-7.9-25.9-7.9-37 0C247 405.4 219.5 416 192 416c-26.9 0-55.3-10.8-77.4-26.1l0 0c-11.9-8.5-28.1-7.8-39.2 1.7c-14.4 11.9-32.5 21-50.6 25.2c-17.2 4-27.9 21.2-23.9 38.4s21.2 27.9 38.4 23.9c24.5-5.7 44.9-16.5 58.2-25C126.5 469.7 159 480 192 480c31.9 0 60.6-9.9 80.4-18.9c5.8-2.7 11.1-5.3 15.6-7.7c4.5 2.4 9.7 5.1 15.6 7.7c19.8 9 48.5 18.9 80.4 18.9c33 0 65.5-10.3 94.5-25.8c13.4 8.4 33.7 19.3 58.2 25c17.2 4 34.4-6.7 38.4-23.9s-6.7-34.4-23.9-38.4c-18.1-4.2-36.2-13.3-50.6-25.2c-11.1-9.4-27.3-10.1-39.2-1.7l0 0C439.4 405.2 410.9 416 384 416c-27.5 0-55-10.6-77.5-26.1z" />
+          </svg>
+          <h3 class="font-bold text-2xl mt-8 text-gray-600 group-hover:text-gray-800">Respond to Emergencies and
+            Disasters</h3>
+          <p class="mt-5 text-[#727b9d]">
+            In times of crisis, we act swiftly to provide immediate relief and support for affected communities, helping
+            them recover and rebuild their lives.
+          </p>
+        </div>
+        <div
+          class="items-start col-span-1 flex flex-col text-start p-10 bg-white shadow-xl rounded-lg dark:shadow-neutral-600 group">
+          <svg class="text-6xl fill-[#701415]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+            <path
+              d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288H584.4L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320H199.3L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z" />
+          </svg>
+          <h3 class="font-bold text-2xl mt-8 text-gray-600 group-hover:text-gray-800">Social Justice and Inclusion</h3>
+          <p class="mt-5 text-[#727b9d]">
+            We advocate for equality, diversity, and social justice. Our mission includes addressing systemic
+            inequalities and promoting the inclusion of all, regardless of their background, race, gender, or
+            socio-economic status.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Health and Education -->
+    <section class="mt-14 md:mt-20 grid grid-cols-12">
+      <div class="col-span-12 md:col-span-7 grid grid-cols-12 justify-start items-center">
+        <div class="col-span-12 p-5 sm:px-24 sm:py-16 flex flex-col gap-3 justify-center">
+          <h2 class="text-4xl font-extrabold text-[#701415]">
+            How you're changing children's lives
+          </h2>
+          <p class="text-[#727B9D] font-semibold text-xl">
+            We are on a mission to solve the problems and reinvent charity for
+            new generation.
+          </p>
+          <div class="col-span-12 grid grid-cols-1 gap-5 mt-7">
+            <div class="col-span-1 flex flex-col justify-center items-start">
+              <h2 class="text-3xl font-bold mb-2">
+                Health
+              </h2>
+              <p class="text-[#727B9D] font-medium text-lg">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+                ad illum dolorum ducimus facilis obcaecati, sapiente sed
+                temporibus veritatis consequatur.
+              </p>
+            </div>
+            <div class="col-span-1 flex flex-col justify-center items-start">
+              <h2 class="text-3xl font-bold mb-2">
+                Education
+              </h2>
+              <p class="text-[#727B9D] font-medium text-lg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Temporibus adipisci laboriosam impedit exercitationem, sit
+                perferendis repellendus tempora expedita animi quos.
+              </p>
+            </div>
+
+            <div class="col-span-1 mt-10">
+              <a href="" type="button" class="flex group">
+                <div
+                  class="w-8 h-8 bg-[#800000] group-hover:bg-black rounded-md animate-pulse group-hover:animate-none relative">
+                  <div class="!w-20 h-0.5 border-t-2 border-black absolute left-1/2 top-1/2"></div>
+                </div>
+                <span class="text-2xl font-extrabold ml-[70px] mt-0">See More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:inline-block col-span-5 h-full">
+        <img src="./images/e348d4_0fccc924bfa646558c705f74568c42fd~mv2.webp" alt=""
+          class="w-full h-full object-cover" />
+      </div>
+    </section>
+
+    <!-- Our current projects -->
+    <section class="mt-14 p-5 lg:px-16">
+      <div class="mt-8 col-span-1 flex flex-col justify-center gap-7 items-center mb-14">
+        <h2 class="text-4xl text-center md:text-[50px] font-bold text-[#701415]">Current Projects</h2>
+        <p class="text-base text-center font-semibold opacity-70">
+          Our mission is to uplift and empower individuals and communities in need, fostering positive and lasting
+          change in the world
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10 p-5 md:px-20">
+        <div class="col-span-1">
+          <div class="w-full relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+            <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
+              <img src="./images/black.webp" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  Apple AirPods
+                </p>
+                <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  $95.00
+                </p>
+              </div>
+              <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+                With plenty of talk and listen time, voice-activated Siri access, and an
+                available wireless charging case.
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <a href=""
+                class="block w-full select-none rounded-lg bg-[#701415] text-white py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button">
+                Donate
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="w-full relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+            <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
+              <img src="./images/black.webp" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  Apple AirPods
+                </p>
+                <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  $95.00
+                </p>
+              </div>
+              <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+                With plenty of talk and listen time, voice-activated Siri access, and an
+                available wireless charging case.
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <a href=""
+                class="block w-full select-none rounded-lg bg-[#701415] text-white py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button">
+                Donate
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="w-full relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+            <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
+              <img src="./images/black.webp" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  Apple AirPods
+                </p>
+                <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
+                  $95.00
+                </p>
+              </div>
+              <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+                With plenty of talk and listen time, voice-activated Siri access, and an
+                available wireless charging case.
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <a href=""
+                class="block w-full select-none rounded-lg bg-[#701415] text-white py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button">
+                Donate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Expenditure -->
+    <section class="mt-14 lg:mt-20 grid grid-cols-12">
+      <div class="hidden md:inline-block col-span-5 h-[600px]">
+        <img src="./images/untitled-design-2022-08-10t101208-322.webp" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="col-span-12 md:col-span-7 relative h-auto flex flex-col justify-center">
+        <div class="opacity-5 blur-sm w-full h-[800px] md:h-[600px]">
+          <img src="./images/pexels-suraphat-nueaon-933624.jpg" class="object-cover object-center w-full h-full"
+            alt="" />
+        </div>
+        <div class="w-full absolute inset-0 p-5 sm:p-12 flex flex-col justify-center overflow-hidden">
+          <h2 class="text-4xl font-extrabold mb-5 text-[#701415]">
+            Where our money goes
+          </h2>
+          <p class="opacity-50 font-semibold text-xl">
+            We are on a mission to solve the problems and reinvent charity for
+            new generation.
+          </p>
+          <div class="grid grid-cols-2 gap-5 sm:gap-10 mt-16">
+            <div class="col-span-1 flex flex-col justify-center items-start">
+              <h2 class="text-3xl font-bold mb-2">
+                87%
+              </h2>
+              <p class="text-[#727B9D] font-medium text-lg">
+                of our money was spent delivering our mission
+              </p>
+            </div>
+            <div class="col-span-1 flex flex-col justify-center items-start">
+              <h2 class="text-3xl font-bold mb-2">
+                87%
+              </h2>
+              <p class="text-[#727B9D] font-medium text-lg">
+                of our money was spent delivering our mission
+              </p>
+            </div>
+            <div class="col-span-1 flex flex-col justify-center items-start">
+              <h2 class="text-3xl font-bold mb-2">
+                87%
+              </h2>
+              <p class="text-[#727B9D] font-medium text-lg">
+                of our money was spent delivering our mission
+              </p>
+            </div>
+            <div class="col-span-1 flex flex-col justify-center items-start">
+              <h2 class="text-3xl font-bold mb-2">
+                87%
+              </h2>
+              <p class="text-[#727B9D] font-medium text-lg">
+                of our money was spent delivering our mission
+              </p>
+            </div>
+            <div class="col-span-2 lg:col-span-1 mt-5 font-medium text-base text-[#727b9d]">
+              <a href="" type="button" class="flex group">
+                <div
+                  class="w-8 h-8 bg-[#800000] group-hover:bg-black rounded-md animate-pulse group-hover:animate-none relative">
+                  <div class="!w-20 h-0.5 border-t-2 border-black absolute left-1/2 top-1/2"></div>
+                </div>
+                <span class="text-2xl font-extrabold ml-[70px] mt-0">Donate</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Members -->
+    <section class="bg-white dark:bg-gray-900 p-5 md:px-20 lg:mt-28 lg:mb-32">
+      <div class="pt-8">
+        <div class="col-span-1 flex justify-center items-center mb-28">
+          <h2 class="text-4xl text-center md:text-[50px] font-bold text-[#701415] underline">Our Team</h2>
+        </div>
+        <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="text-center text-gray-500 dark:text-gray-400 group">
+            <img class="mx-auto mb-4 w-56 h-56 rounded-full object-cover" src="./images/crop photos/Arslan Akbar.jpeg"
+              alt="Bonnie Avatar">
+            <h3 class="mb-1 !text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Arslan Akbar
+            </h3>
+            <p>CEO/Co-founder</p>
+            <ul
+              class="flex justify-center mt-4 space-x-4 group-hover:bg-[#eee] bg-gray-300 rounded-lg p-3 transition-all delay-150 duration-300 ease-in-out">
+              <li>
+                <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#ea4c89] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center text-gray-500 dark:text-gray-400 group">
+            <img class="mx-auto mb-4 w-56 h-56 rounded-full object-cover" src="./images/crop photos/Waleed.jpeg"
+              alt="Waleed">
+            <h3 class="mb-1 !text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Waleed
+            </h3>
+            <p>Vice President</p>
+            <ul
+              class="flex justify-center mt-4 space-x-4 group-hover:bg-[#eee] bg-gray-300 rounded-lg p-3 transition-all delay-150 duration-300 ease-in-out">
+              <li>
+                <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#ea4c89] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center text-gray-500 dark:text-gray-400 group">
+            <img class="mx-auto mb-4 w-56 h-56 rounded-full object-cover" src="./images/crop photos/Awais Chishti.jpeg"
+              alt="Awais Chishti">
+            <h3 class="mb-1 !text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Awais Chishti
+            </h3>
+            <p>General Secratary</p>
+            <ul
+              class="flex justify-center mt-4 space-x-4 group-hover:bg-[#eee] bg-gray-300 rounded-lg p-3 transition-all delay-150 duration-300 ease-in-out">
+              <li>
+                <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#ea4c89] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center text-gray-500 dark:text-gray-400 group">
+            <img class="mx-auto mb-4 w-56 h-56 rounded-full object-cover" src="./images/crop photos/Rameen Fatima.jpeg"
+              alt="Rameen Fatima">
+            <h3 class="mb-1 !text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Rameen Fatima
+            </h3>
+            <p>Women Wing Head</p>
+            <ul
+              class="flex justify-center mt-4 space-x-4 group-hover:bg-[#eee] bg-gray-300 rounded-lg p-3 transition-all delay-150 duration-300 ease-in-out">
+              <li>
+                <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-[#ea4c89] hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="relative p-5 md:px-20 my-20">
+      <div class="col-span-1 flex justify-center items-center mb-28">
+        <h2 class="text-4xl text-center md:text-[50px] font-bold text-[#701415] underline">Reviews</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-10 mt-10 lg:mt-20">
+        <div class="lg:col-span-2 grid grid-cols-1 gap-10 border-t-4 border-b-4 border-[#701415] shadow-xl p-5 lg:order-1 order-2">
+          <div class="w-full">
+            <swiper-container class="mySwiper w-full h-[300px] col-span-1" autoplay pagination="true"
+              pagination-clickable="true" slides-per-view="1" navigation="false" space-between="20" loop>
+              <swiper-slide>
+                <div class="flex flex-col md:px-16 p-5 md:py-8">
+                  <p class="line-clamp-6">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+                    voluptatibus qui harum molestias eaque quaerat, reiciendis sunt
+                    et fugit tempore perspiciatis in eum. Vitae architecto quo
+                    quidem minima, obcaecati odit.
+                  </p>
+                  <div class="flex justify-between mt-5 items-center gap-5">
+                    <div class="md:mt-12 mt-6 flex flex-col justify-center">
+                      <h3 class="text-xl font-semibold">Devid Smith</h3>
+                      <p>Founder @democompany</p>
+                    </div>
+                    <div>
+                      <img src="./images/brand-light-02.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="flex flex-col px-16 py-8">
+                  <div class="object-cover mb-8">
+                    <img src="./images/icon-quote.svg" alt="" class="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+                    voluptatibus qui harum molestias eaque quaerat, reiciendis sunt
+                    et fugit tempore perspiciatis in eum. Vitae architecto quo
+                    quidem minima, obcaecati odit.
+                  </p>
+                  <div class="flex justify-between mt-5 items-center gap-5">
+                    <div class="mt-12 flex flex-col justify-center">
+                      <h3 class="text-xl font-semibold">Devid Smith</h3>
+                      <p>Founder @democompany</p>
+                    </div>
+                    <div>
+                      <img src="./images/brand-light-02.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="flex flex-col px-16 py-8">
+                  <div class="object-cover mb-8">
+                    <img src="./images/icon-quote.svg" alt="" class="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+                    voluptatibus qui harum molestias eaque quaerat, reiciendis sunt
+                    et fugit tempore perspiciatis in eum. Vitae architecto quo
+                    quidem minima, obcaecati odit.
+                  </p>
+                  <div class="flex justify-between mt-5 items-center gap-5">
+                    <div class="mt-12 flex flex-col justify-center">
+                      <h3 class="text-xl font-semibold">Devid Smith</h3>
+                      <p>Founder @democompany</p>
+                    </div>
+                    <div>
+                      <img src="./images/brand-light-02.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </div>
+        <div class="col-span-1 flex flex-col justify-center gap-3 p-5 bg-white shadow-xl border-t-4 border-[#701415] lg:order-2 order-1">
+          <h1 class="text-3xl font-bold text-[#701415]">Your Feedback</h1>
+          <p class="text-sm text-gray-500">We would like your feedback to improve our website</p>
+          <textarea name="feedback" id="feedback" rows="3" placeholder="Give your Feedback" class="mt-7 w-full rounded-md focus:border-[#701415] focus:ring-[#701415]"></textarea>
+          <button class="hover:bg-red-800 hover:shadow-lg md:w-[150px] w-full bg-[#701415] text-white px-5 py-3 self-end mt-5 rounded-full font-semibold">Submit</button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="w-full md:h-[300px] h-[400px] mt-20 md:mt-40 bg-black relative">
+      <div class="w-full h-full opacity-50 grayscale-[50%] blur-sm">
+        <img src="./images/kids.jpg" class="w-full h-full object-cover" alt="" />
+      </div>
+      <div class="absolute inset-0 z-10 flex flex-col text-center w-full h-full p-10 justify-center items-center gap-12">
+        <h2 class="text-3xl md:text-[40px] text-white font-bold">
+          Get updates on what we're doing
+        </h2>
+        <div class="flex lg:flex-row flex-col justify-center items-center gap-5 w-full">
+          <input type="text"
+            class="rounded-lg placeholder:text-[#727B9D] !h-[50px] px-5 py-3 focus:outline-none focus:border-[#701415] focus:ring-[#701415] w-full md:w-[350px]"
+            placeholder="Your Name" />
+          <input type="email"
+            class="rounded-lg placeholder:text-[#727B9D] !h-[50px] px-5 py-3 focus:outline-none focus:border-[#701415] focus:ring-[#701415] w-full md:w-[350px]"
+            placeholder="Email Address" />
+          <a href="" type="button"
+            class="sm:w-[150px] rounded-full hover:bg-red-800 hover:shadow-lg bg-[#701415] text-white flex justify-center items-center font-semibold text-xl p-5 !h-[50px]">Subscribe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-gray-100 p-5 md:px-10 md:pt-10">
+    <div class="grid lg:grid-cols-3 gap-20 items-center p-5">
+      <div class="col-span-1 flex flex-col justify-center gap-5">
+        <h1 class="text-3xl text-[#701415] font-bold">ALIF Charity Foundation</h1>
+        <p class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quam dolores
+          reprehenderit nesciunt amet illum itaque numquam magni, ratione labore in. Voluptates laudantium
+          error laboriosam?</p>
+        <div class="flex gap-5 lg:gap-3 items-center justify-center lg:justify-start">
+          <a href="#" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
+              <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fd5"></stop>
+                <stop offset=".328" stop-color="#ff543f"></stop>
+                <stop offset=".348" stop-color="#fc5245"></stop>
+                <stop offset=".504" stop-color="#e64771"></stop>
+                <stop offset=".643" stop-color="#d53e91"></stop>
+                <stop offset=".761" stop-color="#cc39a4"></stop>
+                <stop offset=".841" stop-color="#c837ab"></stop>
+              </radialGradient>
+              <path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z">
+              </path>
+              <radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4168c9"></stop>
+                <stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop>
+              </radialGradient>
+              <path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z">
+              </path>
+              <path fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z">
+              </path>
+              <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
+              <path fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
+              <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615" y1="9.993" y2="40.615"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#2aa4f4"></stop>
+                <stop offset="1" stop-color="#007ad9"></stop>
+              </linearGradient>
+              <path fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)"
+                d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path>
+              <path fill="#fff"
+                d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
+              <path fill="#212121" fill-rule="evenodd"
+                d="M10.904,6h26.191C39.804,6,42,8.196,42,10.904v26.191 C42,39.804,39.804,42,37.096,42H10.904C8.196,42,6,39.804,6,37.096V10.904C6,8.196,8.196,6,10.904,6z"
+                clip-rule="evenodd"></path>
+              <path fill="#ec407a" fill-rule="evenodd"
+                d="M29.208,20.607c1.576,1.126,3.507,1.788,5.592,1.788v-4.011 c-0.395,0-0.788-0.041-1.174-0.123v3.157c-2.085,0-4.015-0.663-5.592-1.788v8.184c0,4.094-3.321,7.413-7.417,7.413 c-1.528,0-2.949-0.462-4.129-1.254c1.347,1.376,3.225,2.23,5.303,2.23c4.096,0,7.417-3.319,7.417-7.413L29.208,20.607L29.208,20.607 z M30.657,16.561c-0.805-0.879-1.334-2.016-1.449-3.273v-0.516h-1.113C28.375,14.369,29.331,15.734,30.657,16.561L30.657,16.561z M19.079,30.832c-0.45-0.59-0.693-1.311-0.692-2.053c0-1.873,1.519-3.391,3.393-3.391c0.349,0,0.696,0.053,1.029,0.159v-4.1 c-0.389-0.053-0.781-0.076-1.174-0.068v3.191c-0.333-0.106-0.68-0.159-1.03-0.159c-1.874,0-3.393,1.518-3.393,3.391 C17.213,29.127,17.972,30.274,19.079,30.832z"
+                clip-rule="evenodd"></path>
+              <path fill="#fff" fill-rule="evenodd"
+                d="M28.034,19.63c1.576,1.126,3.507,1.788,5.592,1.788v-3.157 c-1.164-0.248-2.194-0.856-2.969-1.701c-1.326-0.827-2.281-2.191-2.561-3.788h-2.923v16.018c-0.007,1.867-1.523,3.379-3.393,3.379 c-1.102,0-2.081-0.525-2.701-1.338c-1.107-0.558-1.866-1.705-1.866-3.029c0-1.873,1.519-3.391,3.393-3.391 c0.359,0,0.705,0.056,1.03,0.159V21.38c-4.024,0.083-7.26,3.369-7.26,7.411c0,2.018,0.806,3.847,2.114,5.183 c1.18,0.792,2.601,1.254,4.129,1.254c4.096,0,7.417-3.319,7.417-7.413L28.034,19.63L28.034,19.63z"
+                clip-rule="evenodd"></path>
+              <path fill="#81d4fa" fill-rule="evenodd"
+                d="M33.626,18.262v-0.854c-1.05,0.002-2.078-0.292-2.969-0.848 C31.445,17.423,32.483,18.018,33.626,18.262z M28.095,12.772c-0.027-0.153-0.047-0.306-0.061-0.461v-0.516h-4.036v16.019 c-0.006,1.867-1.523,3.379-3.393,3.379c-0.549,0-1.067-0.13-1.526-0.362c0.62,0.813,1.599,1.338,2.701,1.338 c1.87,0,3.386-1.512,3.393-3.379V12.772H28.095z M21.635,21.38v-0.909c-0.337-0.046-0.677-0.069-1.018-0.069 c-4.097,0-7.417,3.319-7.417,7.413c0,2.567,1.305,4.829,3.288,6.159c-1.308-1.336-2.114-3.165-2.114-5.183 C14.374,24.749,17.611,21.463,21.635,21.38z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="grid sm:grid-cols-3 gap-10">
+          <div>
+            <h3 class="text-2xl font-bold text-center">Quick Links</h3>
+            <ul class="flex flex-col items-center gap-4 mt-3">
+              <li><a class="hover:text-[#701415] hover:underline" href="./index.html">Home</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="./team.html">Team</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="./about-us.html">About Us</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="#donate">Donate</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="./signIn.html">Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-center">Projects</h3>
+            <ul class="flex flex-col items-center gap-4 mt-3">
+              <li><a class="hover:text-[#701415] hover:underline" href="#">Health</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="#">Food</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="#">Education</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="#">Social Welfare</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="#">Disaster</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-center">Support</h3>
+            <ul class="flex flex-col items-center gap-4 mt-3">
+              <li><a class="hover:text-[#701415] hover:underline" href="#media">Media</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="./blogs.html">Blogs</a></li>
+              <li><a class="hover:text-[#701415] hover:underline" href="./contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="grid md:grid-cols-2 items-center mt-5 gap-3">
+      <div class="col-span-1 flex md:justify-start justify-center items-center">
+        <ul class="flex flex-row lg:justify-start justify-center items-center text-sm">
+          <li><a href="" class="p-3 sm:p-5">English</a></li>
+          <li><a href="" class="p-3 sm:p-5">Privacy Policy</a></li>
+          <li><a href="" class="p-3 sm:p-5">Support</a></li>
+        </ul>
+      </div>
+      <div class="col-span-1 flex lg:justify-end justify-center items-center">
+        <p><span>©</span> 2025 Base. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/src/js/gsapAnimation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+</body>
+
+</html>
